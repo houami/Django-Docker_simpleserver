@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def homePageView(request):
-    text = display()
+    text = 'We are serving from ' + display()
     return HttpResponse(text)
 
 def display():

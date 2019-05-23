@@ -10,3 +10,5 @@ RUN pip3 install psycopg2 django=="$DJANGO_VERSION"
 RUN mkdir -p /djangotest
 COPY . /djangotest
 EXPOSE 8000
+WORKDIR /djangotest
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
